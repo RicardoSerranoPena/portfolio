@@ -5,11 +5,11 @@
         <br>
         Ricardo
       </h1>
-      <div class="border js-letter" style="transform: translateX(0%) translateZ(0px);">
+      <div class="border">
         <span></span>
-        <span class="js-letter" style="transform: translateX(0%) translateZ(0px);"></span>
+        <span></span>
       </div>
-      <p>I'm a freelance web developer</p>
+      <p>freelance web developer <br> currently living in Vietnam</p>
     </div>
     <div class="top-image">
       <a href="#"></a>
@@ -31,7 +31,7 @@ export default {
     background-repeat: no-repeat;
     z-index: 25;
     position: relative;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     max-width: 650px;
     margin: 0 8% 0 auto;
@@ -42,22 +42,4 @@ export default {
     height: 100%;
     max-width: 400px;
   }
-  .title .border {
-    display: inline-block;
-    margin-bottom: 0.4em;
-  }
-  .title .border span:first-child {
-    margin-bottom: 0.3em;
-  }
-  .title .border span:last-child {
-      margin-left: 54px;
-  }
-  .title .border span {
-    display: block;
-    width: 88px;
-    height: 4px;
-    border-radius: 5px;
-    background: #0d47a1;
-  }
-
 </style>

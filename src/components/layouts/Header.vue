@@ -2,9 +2,9 @@
   <header>
     <a href="#" class="name">Ricardo</a>
     <div class="header-right">
-      <a href="#">Projects</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#Projects">Projects</a>
+      <a href="#About">About</a>
+      <a href="#Contact">Contact</a>
     </div>
   </header>
 </template>
