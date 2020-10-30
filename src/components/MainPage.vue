@@ -1,5 +1,5 @@
 <template>
-  <div class="full-page">
+  <div class="full-page" id="main-page">
     <div class="title">
       <h1>Hello I'm
         <br>

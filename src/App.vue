@@ -50,7 +50,7 @@ export default {
     display: flex;
     align-items: center;
     position: relative;
-    scroll-behavior: smooth;
+    transition: opacity 0.25s ease-out;  
   }
   .title {
     position: absolute;

@@ -1,10 +1,10 @@
 <template>
   <header>
-    <a href="#" class="name">Ricardo</a>
+    <a href="#" v-scroll-to="'#main-page'" class="name">Ricardo</a>
     <div class="header-right">
-      <a href="#Projects">Projects</a>
-      <a href="#About">About</a>
-      <a href="#Contact">Contact</a>
+      <a href="#projects" v-scroll-to="'#projects'">Projects</a>
+      <a href="#about" v-scroll-to="'#about'">About</a>
+      <a href="#contact" v-scroll-to="'#contact'">Contact</a>
     </div>
   </header>
 </template>

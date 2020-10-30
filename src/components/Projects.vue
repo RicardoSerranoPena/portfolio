@@ -1,13 +1,15 @@
 <template>
-  <div class="full-page projects" id="Projects">
-    <div class="title">
-      <h1>Projects</h1>
-      <div class="border">
-        <span></span>
-        <span></span>
+  <div class="full-page projects" id="projects">
+    <transition name="fade">
+      <div class="title">
+        <h1>Projects</h1>
+        <div class="border">
+          <span></span>
+          <span></span>
+        </div>
+        <p>websites</p>
       </div>
-      <p>websites</p>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -29,6 +31,12 @@ export default {
   } 
   .projects span {
     background: #ff5252 !important;
+  }
+  .fade-enter-active, .fade-leave-active {
+  transition: opacity 0.25s ease-out;
+  }
+  .fade-enter, .fade-leave-to {
+  opacity: 0;
   }
 
 </style>

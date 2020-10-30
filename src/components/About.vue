@@ -1,5 +1,5 @@
 <template>
-  <div class="full-page about" id="About">
+  <div class="full-page about" id="about">
     <div class="title">
       <h1>About</h1>
       <div class="border">
