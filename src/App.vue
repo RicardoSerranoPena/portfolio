@@ -2,7 +2,7 @@
   <div class="main">
     <Header/>
     <MainPage/>
-    <Projects/>
+    <Work/>
     <About/>
     <Contact/>
   </div>
@@ -11,7 +11,7 @@
 <script>
 import Header from './components/layouts/Header';
 import MainPage from './components/MainPage';
-import Projects from './components/Projects';
+import Work from './components/Work';
 import About from './components/About';
 import Contact from './components/Contact';
 
@@ -20,7 +20,7 @@ export default {
   components: {
     Header,
     MainPage,
-    Projects,
+    Work,
     About,
     Contact
   }
@@ -41,7 +41,7 @@ export default {
     font-size: 16px;
   }
   a {
-    color: #ff5252;
+    color: #9fd3c7;
     text-decoration: none;
   }
   .full-page {
@@ -50,7 +50,8 @@ export default {
     display: flex;
     align-items: center;
     position: relative;
-    transition: opacity 0.25s ease-out;  
+    transition: opacity 0.25s ease-out;
+    background-color: #ececec;
   }
   .title {
     position: absolute;
@@ -61,12 +62,12 @@ export default {
   }
   .title h1{
     margin-bottom: 1rem;
-    color: #ff5252;
+    color: #142d4c;
     letter-spacing: 0.04em;
   }
   .title p, a{
-    font-size: 0.55em;
-    color: #ff5252;
+    font-size: 1.9rem;
+    color: #142d4c;
     letter-spacing: 0.05em;
   }
   .title .border {
@@ -84,6 +85,6 @@ export default {
     width: 88px;
     height: 4px;
     border-radius: 5px;
-    background: #002171;
+    background: #9fd3c7;
   }
 </style>

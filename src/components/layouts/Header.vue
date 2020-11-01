@@ -2,7 +2,7 @@
   <header>
     <a href="#" v-scroll-to="'#main-page'" class="name">Ricardo</a>
     <div class="header-right">
-      <a href="#projects" v-scroll-to="'#projects'">Projects</a>
+      <a href="#projects" v-scroll-to="'#projects'">Work</a>
       <a href="#about" v-scroll-to="'#about'">About</a>
       <a href="#contact" v-scroll-to="'#contact'">Contact</a>
     </div>
@@ -30,6 +30,7 @@ export default {
     font-size: 1.5rem;
     letter-spacing: 0.1em;
     position: relative;
+    color: #9fd3c7;
   }
   .header-right {
     display: flex;
@@ -41,6 +42,7 @@ export default {
     margin-right: 2rem;
     font-size: 1.5rem;
     letter-spacing: 0.1em;
+    color: #9fd3c7;
   }
 
 </style>

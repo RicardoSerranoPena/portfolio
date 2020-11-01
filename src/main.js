@@ -6,7 +6,7 @@ const VueScrollTo = require('vue-scrollto')
 
 app.use(VueScrollTo, {
   container: "body",
-  duration: 500,
+  duration: 1000,
   easing: "ease",
 })
 

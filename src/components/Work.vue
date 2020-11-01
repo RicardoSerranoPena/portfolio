@@ -2,7 +2,7 @@
   <div class="full-page projects" id="projects">
     <transition name="fade">
       <div class="title">
-        <h1>Projects</h1>
+        <h1>Work</h1>
         <div class="border">
           <span></span>
           <span></span>
@@ -15,28 +15,22 @@
 
 <script>
 export default {
-  name: 'Projects'
+  name: 'Work'
 }
 </script>
 
 <style scoped>
   .projects{
-    background-color: #002171;
+    background-color: #142d4c;
   }
   .title p{
-    color: white;
+    color: #9fd3c7;
   } 
   .title h1 {
-    color: white;
+    color: #9fd3c7;
   } 
   .projects span {
-    background: #ff5252 !important;
-  }
-  .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.25s ease-out;
-  }
-  .fade-enter, .fade-leave-to {
-  opacity: 0;
+    background: white !important;
   }
 
 </style>

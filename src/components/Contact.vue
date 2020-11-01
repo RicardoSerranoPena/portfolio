@@ -22,15 +22,15 @@ export default {
     display: block;
   }
   .contact{
-    background-color: #002171;
+    background-color: #142d4c;
   }
   .title a{
-    color: white;
+    color: #9fd3c7;
   } 
   .title h1 {
-    color: white;
+    color: #9fd3c7;
   } 
   .contact span {
-    background: #ff5252 !important;
+    background: white !important;
   }
 </style>
