@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
   .top-image{
-    background: url(../assets/cat.png);
+    background: url(../assets/images/cat.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
