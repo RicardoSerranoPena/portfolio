@@ -1,62 +1,79 @@
 <template>
-  <div class="full-page projects" id="projects">
+  <div class="full-page work" id="work">
     <div class="title">
       <h1>Work</h1>
       <div class="border">
         <span></span>
         <span></span>
       </div>
-        <a href="" @click="changeWork">{{works.tamchay.title}}</a>
-        <a href="" @click="changeWork">{{works.artesanias.title}}</a>
-        <a>{{works.todoList.title}}</a>
+      <div v-for="work in works" :key="work.id">
+        <a :href="url" @mouseover="changeWork(work.id)">{{work.title}}</a>
+      </div>
     </div>
-    <WorkDisplay :works="works"/>
+    <div class="image-container">
+      <a :href="url" class="image">
+        <img alt="portfolio image" :src="require(`../assets/images/${image}`)">
+        <p>{{description}}</p>
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
-import WorkDisplay from './WorkDisplay';
 
 export default {
   name: 'Work',
   components: {
-    WorkDisplay,
   },
   data() {
     return {
-      works: {
-        tamchay : {
+      works: [
+        {
+          id: 0,
           title: 'Tâm Chay Retreat',
           url : '',
-          bg_pic: '../assets/images/tc_home_ss.png',
+          bg_pic: 'tc_home_ss.png',
           description: 'Website for booking rooms in a homestay.',
         },
-        artesanias : {
+        {
+          id: 1,
           title: 'Artesanías Lily',
           url : '',
-          bg_pic: '../assets/images/a_home_ss.png',
+          bg_pic: 'a_home_ss.png',
           description: 'E-commerce website for selling artisan work',
         },
-        todoList : {
+        {
+          id : 2,
           title: 'ToDoList',
           url : '',
-          bg_pic: '../assets/images/tl_home_ss.png',
+          bg_pic: 'tdl_home_ss.png',
           description: 'A todo list web application'
         },
-      },
+      ],
+      index: 0,
     }
   },
   methods: {
-    changeWork(e) {
-      e.preventDefault();
-
+    changeWork(index) {
+      this.index = index;
     }
-  }
+  },
+  computed: {
+    image() {
+      return this.works[this.index].bg_pic;
+    },
+    description() {
+      return this.works[this.index].description;
+    },
+    url() {
+      return this.works[this.index].url;
+    }
+  },
 }
 </script>
 
 <style scoped>
-  .projects{
+  .work{
     background-color: #142d4c;
   }
   .title p{
@@ -65,7 +82,7 @@ export default {
   .title h1 {
     color: #9fd3c7;
   } 
-  .projects span {
+  .work span {
     background: white !important;
   }
   .title li, a{
@@ -73,5 +90,17 @@ export default {
     color: #9fd3c7;
     letter-spacing: 0.05em;
     display: block;
+  }
+  .image-container {
+    width: 50%;
+    min-width: 400px;
+    margin: 0 8% 0 auto;
+  }
+  img{
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+    box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
   }
 </style>
