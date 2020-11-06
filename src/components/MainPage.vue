@@ -13,7 +13,6 @@
       <p>freelance web developer <br> based in Vietnam</p>
     </div>
     <div class="top-image">
-      <a href="#"></a>
     </div>
   </div>
 </template>
@@ -37,13 +36,8 @@ export default {
     max-width: 650px;
     margin: 0 8% 0 auto;
     display: block;
-
-  }
-  .top-image a{
-    height: 100%;
-    max-width: 400px;
   }
   .hello {
-    font-size: .5em;
+    font-size: .45em;
   }
 </style>

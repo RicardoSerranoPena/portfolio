@@ -29,6 +29,15 @@ export default {
 </script>
 
 <style>
+  html {
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+  }
+  @media screen and (max-width: 600px) {
+    html {
+      font-size: 12px;
+    }
+  }
   * {
     box-sizing: border-box;
     margin: 0;
@@ -36,13 +45,10 @@ export default {
     border: 0;
     vertical-align: baseline;
   }
-  body {
-    font-family: 'Roboto Slab', serif;
-    font-size: 16px;
-  }
   a {
     color: #9fd3c7;
     text-decoration: none;
+    display: block;
   }
   .full-page {
     width: 100%;
@@ -50,8 +56,12 @@ export default {
     display: flex;
     align-items: center;
     position: relative;
-    transition: opacity 0.25s ease-out;
     background-color: #ececec;
+    color: #142d4c;
+  }
+  .dark {
+    background-color: #142d4c;
+    color: #9fd3c7;
   }
   .title {
     position: absolute;
@@ -59,16 +69,13 @@ export default {
     margin-left: 10%;
     z-index: 50;
     font-size: 3.5rem;
+    letter-spacing: 0.04em;
   }
   .title h1{
     margin-bottom: 1rem;
-    color: #142d4c;
-    letter-spacing: 0.04em;
   }
   .title p, a{
     font-size: 1.9rem;
-    color: #142d4c;
-    letter-spacing: 0.05em;
   }
   .title .border {
     display: inline-block;
@@ -86,5 +93,8 @@ export default {
     height: 4px;
     border-radius: 5px;
     background: #9fd3c7;
+  }
+  .dark span {
+    background: white !important;
   }
 </style>

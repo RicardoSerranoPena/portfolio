@@ -2,7 +2,7 @@
   <header>
     <a href="#" v-scroll-to="'#main-page'" class="name">Ricardo</a>
     <div class="header-right">
-      <a href="#projects" v-scroll-to="'#projects'">Work</a>
+      <a href="#work" v-scroll-to="'#work'">Work</a>
       <a href="#about" v-scroll-to="'#about'">About</a>
       <a href="#contact" v-scroll-to="'#contact'">Contact</a>
     </div>
@@ -28,7 +28,7 @@ export default {
   }
   .name {
     font-size: 1.5rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     position: relative;
     color: #9fd3c7;
   }
@@ -38,10 +38,9 @@ export default {
     vertical-align: baseline;
   }
   .header-right a {
-    display: block;
     margin-right: 2rem;
     font-size: 1.5rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     color: #9fd3c7;
   }
 

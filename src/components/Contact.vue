@@ -1,5 +1,5 @@
 <template>
-  <div class="full-page contact" id="contact">
+  <div class="full-page dark contact" id="contact">
     <div class="title">
       <h1>Say Hello!</h1>
       <div class="border">
@@ -18,19 +18,5 @@ export default {
 </script>
 
 <style scoped>
-  a {
-    display: block;
-  }
-  .contact{
-    background-color: #142d4c;
-  }
-  .title a{
-    color: #9fd3c7;
-  } 
-  .title h1 {
-    color: #9fd3c7;
-  } 
-  .contact span {
-    background: white !important;
-  }
+
 </style>
