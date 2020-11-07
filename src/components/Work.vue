@@ -6,14 +6,14 @@
         <span></span>
         <span></span>
       </div>
-      <div v-for="work in works" :key="work.id">
-        <a :href="url" @mouseover="changeWork(work.id)">{{work.title}}</a>
-      </div>
+      <router-link v-for="work in works" :key="work.id" :to="work.url">
+        <div @mouseover="changeWork(work.id)">{{work.title}}</div>
+      </router-link>
     </div>
     <div class="work-container">
-      <a :href="url" class="image">
+      <router-link :to='url' class="image">
         <img alt="portfolio image" :src="require(`../assets/images/${image}`)">
-      </a>
+      </router-link>
       <p>{{description}}</p>
     </div>
   </div>
@@ -31,21 +31,21 @@ export default {
         {
           id: 0,
           title: 'Tâm Chay Retreat',
-          url : '',
+          url : 'tamchay',
           bg_pic: 'tc_home_ss.png',
           description: 'Website for booking rooms in a homestay.',
         },
         {
           id: 1,
           title: 'Artesanías Lily',
-          url : '',
+          url : 'artesaniaslily',
           bg_pic: 'a_home_ss.png',
           description: 'E-commerce website for selling artisan work',
         },
         {
           id : 2,
           title: 'ToDoList',
-          url : '',
+          url : 'todolist',
           bg_pic: 'tdl_home_ss.png',
           description: 'A todo list web application'
         },
