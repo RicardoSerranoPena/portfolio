@@ -8,8 +8,8 @@
       </div>
       <a href="mailto:ricardo30499@gmail.com">ricardo30499@gmail.com</a>
     </div>
-    <div>
-      <form class=form-container
+    <div class="form-container">
+      <form class="contact-form"
         name="contact-form"
         method="post"
         data-netlify="true"
@@ -58,15 +58,66 @@ export default {
 
 <style scoped>
   .form-container {
-    border-width: 2px;
-    border-color: black;
-    z-index: 25;
-    position: relative;
-    height: 70vh;
-    width: 100%;
-    max-width: 650px;
     margin: 0 8% 0 auto;
     display: block;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    background-color: #385170;
+    border-radius: 10px;
+    -webkit-box-shadow: 7px 7px 17px -1px rgba(0, 4, 8, 0.77);
+    -moz-box-shadow: 7px 7px 17px -1px rgba(0, 4, 8, 0.77);
+    box-shadow: 7px 7px 17px -1px rgba(0, 4, 8, 0.77);
+  }
+  .button {
+    margin: 30px;
+    background-color: #39495c;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 160px;
+    height: 60px;
+    color: white;
+    padding: 20px;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17),
+      inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
+      inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+    text-align: center;
+    cursor: pointer;
+  }
+  textarea {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1em;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid #999;
+  }
+  label {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  input {
+    outline: none;
+    -webkit-appearance: unset !important;
+    -webkit-transition: 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    border: none;
+    color: #fff;
+    background: transparent;
+    border-bottom: 1px solid #999;
+    padding: 4px 0;
+        transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    padding-top: 10px;
+    -webkit-appearance: none;
   }
 
 </style>
