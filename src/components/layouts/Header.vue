@@ -1,6 +1,6 @@
 <template>
   <header>
-    <router-link to="/" v-scroll-to="'#main-page'" class="name">Ricardo</router-link>
+    <router-link to="/" v-scroll-to="'#main-page'" class="name">RicardoCodes</router-link>
     <div class="header-right">
       <router-link to="/#work" v-scroll-to="'#work'">Work</router-link>
       <router-link to="/#about" v-scroll-to="'#about'">About</router-link>

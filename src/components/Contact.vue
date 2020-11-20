@@ -65,10 +65,10 @@ export default {
   .contact-form {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 500px;
     padding: 1rem;
     background-color: #385170;
-    border-radius: 10px;
+    border-radius: 1em;
     -webkit-box-shadow: 7px 7px 17px -1px rgba(0, 4, 8, 0.77);
     -moz-box-shadow: 7px 7px 17px -1px rgba(0, 4, 8, 0.77);
     box-shadow: 7px 7px 17px -1px rgba(0, 4, 8, 0.77);
