@@ -22,8 +22,8 @@
         <label for="email">Email</label>
         <input id="email" v-model="email">
         <label for="message">Message</label>
-        <textarea id="message" v-model="message" placeholder="Write here what you want to say"></textarea>
-        <input class="button" type="submit" value="Submit">
+        <textarea id="message" v-model="message" placeholder="Write here your questions, inquiries, and comments. I'll reply as soon as I can."></textarea>
+        <input class="button" type="submit" value="Send Message">
       </form>
     </div>
   </div>
@@ -40,18 +40,18 @@ export default {
     }
   },
   methods: {
-    // onSubmit() {
-    //   let submittedForm = {
-    //     name: this.name,
-    //     email: this.email,
-    //     message: this.message,
-    //   } 
-    //   this.$emit('message-submitted', submittedForm)
+    onSubmit() {
+      let submittedForm = {
+        name: this.name,
+        email: this.email,
+        message: this.message,
+      } 
+      this.$emit('message-submitted', submittedForm)
 
-    //   this.name="",
-    //   this.email="",
-    //   this.message="",
-    // },
+      this.name="";
+      this.email="";
+      this.message="";
+    },
   },
 }
 </script>
@@ -60,12 +60,13 @@ export default {
   .form-container {
     margin: 0 8% 0 auto;
     display: block;
+    font-size: 1.2rem;
   }
   .contact-form {
     display: flex;
     flex-direction: column;
     width: 400px;
-    padding: 20px;
+    padding: 1rem;
     background-color: #385170;
     border-radius: 10px;
     -webkit-box-shadow: 7px 7px 17px -1px rgba(0, 4, 8, 0.77);
@@ -73,14 +74,14 @@ export default {
     box-shadow: 7px 7px 17px -1px rgba(0, 4, 8, 0.77);
   }
   .button {
-    margin: 30px;
-    background-color: #39495c;
-    border-radius: 10px;
-    font-size: 18px;
-    width: 160px;
-    height: 60px;
-    color: white;
-    padding: 20px;
+    margin: 1em auto 1em;
+    background-color: #C6E0DA;
+    border-radius: 1em;
+    font-size: 1rem;
+    width: 10em;
+    height: 3.2em;
+    color: #142D4C;
+    padding: 1em;
     box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17),
       inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
       inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
@@ -88,16 +89,16 @@ export default {
     cursor: pointer;
   }
   textarea {
+    color: white;
     width: 100%;
-    height: 3rem;
+    height: 5rem;
     margin-bottom: 1em;
     outline: none;
     background: transparent;
     border-bottom: 1px solid #999;
   }
   label {
-    font-size: 20px;
-    margin-bottom: 5px;
+    margin: .3em 0;
   }
   input {
     outline: none;
@@ -110,13 +111,14 @@ export default {
     color: #fff;
     background: transparent;
     border-bottom: 1px solid #999;
-    padding: 4px 0;
+    padding: .3em 0;
         transition: 0.3s ease;
     -moz-transition: 0.3s ease;
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     -ms-transition: 0.3s ease;
-    padding-top: 10px;
+    padding-top: .4em;
+    margin-bottom: .3em;
     -webkit-appearance: none;
   }
 
