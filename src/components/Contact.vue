@@ -41,13 +41,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      let submittedForm = {
-        name: this.name,
-        email: this.email,
-        message: this.message,
-      } 
-      this.$emit('message-submitted', submittedForm)
-
+      
       this.name="";
       this.email="";
       this.message="";
