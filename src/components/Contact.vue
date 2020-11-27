@@ -1,12 +1,15 @@
 <template>
   <div class="full-page dark contact" id="contact">
     <div class="title">
-      <h1>Say Hi!</h1>
+      <h1>Say Hello!</h1>
       <div class="border">
         <span></span>
         <span></span>
       </div>
       <a href="mailto:ricardo30499@gmail.com">ricardo30499@gmail.com</a>
+      <font-awesome-icon :icon="['fas', 'user-secret']" />
+      <font-awesome-icon :icon="['fab', 'linkedin']" />
+
     </div>
     <div class="form-container">
       <form class="contact-form"
@@ -30,6 +33,8 @@
 </template>
 
 <script>
+import {faCircle} from '@fortawesome/free-solid-svg-icons'
+
 export default {
   name: 'Contact',
   data() {
@@ -47,6 +52,11 @@ export default {
       this.message="";
     },
   },
+  computed: {
+    icon() {
+      return faCircle;
+    }
+  }
 }
 </script>
 
