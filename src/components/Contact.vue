@@ -7,9 +7,10 @@
         <span></span>
       </div>
       <a href="mailto:ricardo30499@gmail.com">ricardo30499@gmail.com</a>
-      <font-awesome-icon :icon="['fas', 'user-secret']" />
-      <font-awesome-icon :icon="['fab', 'linkedin']" />
-
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/ricardoserranopena/" target="__blank"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
+        <a href="https://www.facebook.com/ricardo.serranopena/" target="__blank"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
+      </div>
     </div>
     <div class="form-container">
       <form class="contact-form"
@@ -61,6 +62,10 @@ export default {
 </script>
 
 <style scoped>
+  .icons a {
+    display: inline;
+    margin-right: 1rem;
+  }
   .form-container {
     margin: 0 8% 0 auto;
     display: block;
