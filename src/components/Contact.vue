@@ -36,8 +36,6 @@
 </template>
 
 <script>
-import {faCircle} from '@fortawesome/free-solid-svg-icons'
-
 export default {
   name: 'Contact',
   data() {
@@ -79,6 +77,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 500px;
+    max-width: 90vw;
     padding: 1rem;
     background-color: #385170;
     border-radius: 1em;

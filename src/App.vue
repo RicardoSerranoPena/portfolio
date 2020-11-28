@@ -1,16 +1,33 @@
 <template>
   <div id="app">
-    <Header/>
+      <MobileHeader v-if="mobileView"/>
+      <Header v-if="!mobileView"/>
     <router-view/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/layouts/Header'
+import MobileHeader from '@/components/layouts/MobileHeader'
 export default {
   name: 'App',
   components: {
     Header,
+    MobileHeader,
+  },
+  data: () => {
+    return {
+      mobileView: false,
+    }
+  },
+  methods: {
+    handleView() {
+      this.mobileView = window.innerWidth <= 700;
+    },
+  },
+  created() {
+    this.handleView();
+    window.addEventListener('resize', this.handleView);
   }
 }
 </script>

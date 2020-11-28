@@ -1,18 +1,18 @@
 <template>
   <header>
     <router-link to="/" v-scroll-to="'#main-page'" class="name">RicardoCodes</router-link>
-    <div class="header-right">
+    <ul class="header-right">
       <div class="dropdown">
-        <router-link to="/#work" v-scroll-to="'#work'">Work</router-link>
+        <li><router-link to="/#work" v-scroll-to="'#work'">Work</router-link></li>
         <div class="work-dropdown">
           <router-link to="tamchay">Tâm Chay Retreat</router-link>
           <router-link to="artesaniaslily">Artesanías Lily</router-link>
           <router-link to="todolist">ToDoList</router-link>
         </div>
       </div>
-      <router-link to="/#about" v-scroll-to="'#about'">About</router-link>
-      <router-link to="/#contact" v-scroll-to="'#contact'">Contact</router-link>
-    </div>
+      <li><router-link to="/#about" v-scroll-to="'#about'">About</router-link></li>
+      <li><router-link to="/#contact" v-scroll-to="'#contact'">Contact</router-link></li>
+    </ul>
   </header>
 </template>
 
@@ -23,6 +23,9 @@ export default {
 </script>
 
 <style scoped>
+  ul.header-right {
+    list-style-type: none;
+  }
   header {
     position: fixed;
     top: 0;
@@ -69,9 +72,6 @@ export default {
   }
   /* Show the dropdown menu on hover */
   .dropdown:hover .work-dropdown {display: block;}
-
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  a:hover {color: #6C929C;}
 
 
 </style>
