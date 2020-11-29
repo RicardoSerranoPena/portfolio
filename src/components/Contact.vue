@@ -53,11 +53,6 @@ export default {
       this.message="";
     },
   },
-  computed: {
-    icon() {
-      return faCircle;
-    }
-  }
 }
 </script>
 
