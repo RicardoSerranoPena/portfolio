@@ -11,7 +11,7 @@
         </div>
       </div>
       <li><router-link to="/#about" v-scroll-to="'#about'">About</router-link></li>
-      <li><router-link to="/#contact" v-scroll-to="'#contact'">Contact</router-link></li>
+      <li><router-link to="/#contact" v-scroll-to="'#contact'" class="last">Contact</router-link></li>
     </ul>
   </header>
 </template>
@@ -72,6 +72,9 @@ export default {
   }
   /* Show the dropdown menu on hover */
   .dropdown:hover .work-dropdown {display: block;}
-
+  
+  .last {
+    margin-right: 0 !important;
+  }
 
 </style>
