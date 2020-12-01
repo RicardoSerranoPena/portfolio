@@ -31,13 +31,14 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 40px 0;
+    padding: 25px 40px 0;
     display: flex;
     justify-content: space-between;
     z-index: 100;
+    font-weight: 400;
   }
   .name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     letter-spacing: 0.08em;
     position: relative;
     color: #9fd3c7;
@@ -48,8 +49,8 @@ export default {
     vertical-align: baseline;
   }
   .header-right a {
-    margin-right: 2rem;
-    font-size: 1.5rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.08em;
     color: #9fd3c7;
   }
