@@ -45,7 +45,7 @@ export default {
         'demoImage' : 'DemoArtesaniasLily.png',
         'copy' : {
           'concept' : 'Artesanias Lily sells authentic hand-crafted artisans and souvenirs from El Salvador. They were looking for a rapid and low-cost solution to expand their business online and adapt to Covid-19. They needed someone with SEO knowledge to stay competitive with other Artesanias Stores in El Salvador. Furthermore, the website needed to be able to synchronize with their other sale channel, which is Facebook.',
-          'development' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat nisl id odio feugiat, eget iaculis leo volutpat. Maecenas ex tellus, ultrices placerat ornare posuere, imperdiet ac augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit efficitur augue, vitae tempus tortor. Quisque et velit iaculis, aliquet purus nec, luctus dolor. Maecenas tempus ex et velit vulputate blandit.',
+          'development' : 'After careful consideration of the limitations and expectations of Artesanias Lily, we knew the best approach was to use a CMS, such as Wix. However we needed to use a service that provided with an easy access control panel for a non-technical person to be able to add any future products the store acquires. Furthermore, we needed to be able to create the website rapidly and with the ability to work in El Salvador, as most customers are from that region. Apart from these issues, we still had to figure out which CMS would provide us with the ability to synchronize all the store’s products with Facebook, another sale’s channel from Artesanias Lily. We were able to chose Wix after considering all of these limitations and quickly developed a website authentic to Artesanias Lily’s desires and upload all of their products, while staying under budget.',
         },
       },
     }
@@ -108,5 +108,20 @@ export default {
   }
   .link-hover {
     background-color: #6C929C;
+  }
+  @media screen and (max-width: 600px) {
+    .title {
+      margin: 0 0 5% 10%;
+      bottom: 10px;
+    }
+    .title h1{
+      margin-bottom: 10px;
+    }
+    .title p {
+      font-size: 1.5rem;
+    }
+    .link-buttons {
+      margin: 0 10% 60%;
+    }
   }
 </style>

@@ -1,16 +1,16 @@
 <template>
   <header>
     <div class="top-nav">
-      <router-link @click="showNav = !showNav" to="/" v-scroll-to="'#top'" class="name">RicardoCodes</router-link>
+      <router-link to="/" v-scroll-to="'#top'" class="name">RicardoCodes</router-link>
       <div id="nav-icon" @click="showNav = !showNav">
         <font-awesome-icon :icon="['fas', icon]" />
       </div>
     </div>
     <div class="mobile-header-content" :class="{'show':showNav}">
       <ul class="links">
-        <li><router-link @click="showNav = !showNav" to="/#work" v-scroll-to="'#work'">Work</router-link></li>
-        <li><router-link @click="showNav = !showNav" to="/#about" v-scroll-to="'#about'">About</router-link></li>
-        <li><router-link @click="showNav = !showNav" to="/#contact" v-scroll-to="'#contact'">Contact</router-link></li>
+        <li><router-link to="/#work" v-scroll-to="'#work'">Work</router-link></li>
+        <li><router-link to="/#about" v-scroll-to="'#about'">About</router-link></li>
+        <li><router-link to="/#contact" v-scroll-to="'#contact'">Contact</router-link></li>
         <li class="icons">
           <a href="https://www.linkedin.com/in/ricardoserranopena/" target="__blank"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
           <a href="https://www.facebook.com/ricardo.serranopena/" target="__blank"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
@@ -64,6 +64,7 @@ export default {
     letter-spacing: 0.08em;
     position: relative;
     font-size: 2.1rem;
+    padding-bottom: 0 !important;
   }
   #nav-icon {
     cursor: pointer;
@@ -93,7 +94,7 @@ export default {
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
-  .links li, a {
+  .links li, a{
     position: relative;
     overflow: hidden;
     text-align: center;

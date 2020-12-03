@@ -6,10 +6,7 @@
         <br>
         Ricardo
       </h1>
-      <div class="border">
-        <span></span>
-        <span></span>
-      </div>
+      <Border />
       <p>freelance web developer <br> based in Vietnam</p>
     </div>
     <div class="top-image">
@@ -18,8 +15,13 @@
 </template>
 
 <script>
+import Border from '@/components/Border.vue';
+
 export default {
-  name: 'MainPage'
+  name: 'MainPage',
+  components : {
+    Border,
+  }
 }
 </script>
 
@@ -39,5 +41,22 @@ export default {
   }
   .hello {
     font-size: .45em;
+  }
+  @media screen and (max-width: 600px) {
+    .top-image {
+      margin: 0 0 45%;
+      height: 55vh;
+    }
+    .title {
+      margin: 0 0 5% 10%;
+      bottom: 0;
+    }
+    .title h1{
+      margin-bottom: 0;
+      line-height: 80%;
+    }
+    .title p {
+      font-size: 1.5rem;
+    }
   }
 </style>

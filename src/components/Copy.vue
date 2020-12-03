@@ -56,4 +56,26 @@ export default {
     order: 2;
     text-align: end;
   }
+  @media screen and (max-width: 600px) {
+    .copy h2 {
+      text-align: left;
+      margin-left: 0;
+    }
+    .concept {
+      flex-wrap: wrap;
+    }
+    .development {
+      flex-wrap: wrap;
+    }
+    .development p {
+      order: 2;
+    }
+    .copy h2 {
+      flex-basis: 100%;
+    }
+    .copy p {
+      flex-basis: 100%;
+    }
+  }
+
 </style>

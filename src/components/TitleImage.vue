@@ -29,4 +29,15 @@ export default {
     box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
     z-index: 25;
   }
+  @media screen and (max-width: 600px) {
+    .image-container {
+      flex-basis: 100%;
+      width: 80%;
+      margin: 15% 5px 1rem;
+    }
+    .image-container img {
+      max-width: 100%;
+      min-width: 200px;
+    }
+  }
 </style>

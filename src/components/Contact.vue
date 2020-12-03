@@ -2,10 +2,7 @@
   <div class="full-page dark contact" id="contact">
     <div class="title">
       <h1>Say Hello!</h1>
-      <div class="border">
-        <span></span>
-        <span></span>
-      </div>
+      <Border :isDark="isDark" />
       <a href="mailto:ricardo30499@gmail.com">ricardo30499@gmail.com</a>
       <div class="icons">
         <a href="https://www.linkedin.com/in/ricardoserranopena/" target="__blank"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
@@ -36,13 +33,19 @@
 </template>
 
 <script>
+import Border from '@/components/Border.vue';
+
 export default {
   name: 'Contact',
+  components: {
+    Border,
+  },
   data() {
     return {
       name: '',
       email: '',
       message: '',
+      isDark: true,
     }
   },
   methods: {
@@ -128,5 +131,23 @@ export default {
     margin-bottom: .3em;
     -webkit-appearance: none;
   }
-
+  @media screen and (max-width: 600px) {
+    .title {
+      margin: 15% 0 0 10%;
+      top: 0;
+    }
+    .title h1{
+      margin-bottom: 0;
+      line-height: 99%;
+    }
+    .title p {
+      font-size: 1.5rem;
+    }
+    .form-container {
+      margin: 85% auto 1rem;
+      display: block;
+      font-size: 1.2rem;
+      bottom: 0;
+    }
+  }
 </style>

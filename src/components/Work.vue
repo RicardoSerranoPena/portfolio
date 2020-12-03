@@ -2,10 +2,7 @@
   <div class="full-page dark work" id="work">
     <div class="title">
       <h1>Work</h1>
-      <div class="border">
-        <span></span>
-        <span></span>
-      </div>
+      <Border />
       <router-link v-for="work in works" :key="work.id" v-scroll-to="'#top'" :to="work.url">
         <div @mouseover="changeWork(work.id), work.isHovered = true" @mouseout="work.isHovered = false">
           <font-awesome-icon class="li-icon" v-show="work.isHovered" :icon="['fas', 'angle-right']" />{{work.title}}
@@ -28,10 +25,12 @@
 </template>
 
 <script>
+import Border from '@/components/Border.vue';
 
 export default {
   name: 'Work',
   components: {
+    Border
   },
   data() {
     return {
@@ -126,5 +125,22 @@ export default {
   }
   .code-link-container a{
     color: #ececec;
+  }
+  @media screen and (max-width: 600px) {
+    .title {
+      margin: 0 0 5% 10%;
+      bottom: 0;
+    }
+    .title h1{
+      margin-bottom: 0;
+      line-height: 80%;
+    }
+    .title p {
+      font-size: 1.5rem;
+    }
+    .work-container {
+      width: 90%;
+      margin: 0 auto 40%;
+    }
   }
 </style>

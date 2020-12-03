@@ -1,5 +1,5 @@
 <template>
-  <div class="border">
+  <div class="border" :class="{ dark: isDark }">
     <span></span>
     <span></span>
   </div>
@@ -7,7 +7,8 @@
 
 <script>
 export default {
-  name: 'Border'
+  name: 'Border',
+  props: ['isDark'],
 }
 </script>
 
@@ -31,5 +32,14 @@ export default {
   }
   .dark span {
     background: white !important;
+  }
+  @media screen and (max-width: 600px) {
+    .title .border {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .title .border span:first-child {
+      margin-bottom: 10px;
+    }
   }
 </style>

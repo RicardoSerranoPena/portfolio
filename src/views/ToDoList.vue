@@ -47,8 +47,8 @@ export default {
         },
         'demoImage' : 'DemoToDoList.png',
         'copy' : {
-          'concept' : 'Tam Chay Retreat Homestay is a young business with inconsistent cash flow. Thus, they were looking for a permanent solution for booking rooms that unbounds them from the yearly fees of premium booking software. They also wanted a website that represents their business, which is simple, fluid, and natural. They were delighted with the product and offered me a position as a web developer/technical support for Tam Chay Retreat Homestay and their other projects, Tam Chay Vegan Restaurants, and Dau Do House Preschool. Currently, we are at an early stage of developing Dau Do House Preschool’s website so it truly reflects the nature of their business.',
-          'development' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat nisl id odio feugiat, eget iaculis leo volutpat. Maecenas ex tellus, ultrices placerat ornare posuere, imperdiet ac augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit efficitur augue, vitae tempus tortor. Quisque et velit iaculis, aliquet purus nec, luctus dolor. Maecenas tempus ex et velit vulputate blandit.',
+          'concept' : 'This personal project was made with the vision of having a web application that was able to be utilized as a To-do list. Users needed to have the ability to interact with this website seamlessly, similar to the way they would use an application. Furthermore, we needed to use a modern front-end framework to accomplish this, and feed the application some data to be able to display and test its usage was the desired one.',
+          'development' : 'We developed this To-do list using VueJS for its reactivity that allowed for the user to truly interact with this website. Using VueJS we were able to make this web application as interactive as possible. We implemented an API that provided us with different todos to feed our application to learn the way to make requests and receive responses, format them and place them inside our ToDoList web application.',
         },
       },
     }
@@ -114,5 +114,20 @@ export default {
   }
   .link-hover {
     background-color: #6C929C;
+  }
+  @media screen and (max-width: 600px) {
+    .title {
+      margin: 0 0 5% 10%;
+      bottom: 10px;
+    }
+    .title h1{
+      margin-bottom: 10px;
+    }
+    .title p {
+      font-size: 1.5rem;
+    }
+    .link-buttons {
+      margin: 0 10% 60%;
+    }
   }
 </style>

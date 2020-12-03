@@ -48,7 +48,7 @@ export default {
         'demoImage' : 'DemoTamChay.png',
         'copy' : {
           'concept' : 'Tam Chay Retreat Homestay is a young business with inconsistent cash flow. Thus, they were looking for a permanent solution for booking rooms that unbounds them from the yearly fees of premium booking software. They also wanted a website that represents their business, which is simple, fluid, and natural. They were delighted with the product and offered me a position as a web developer/technical support for Tam Chay Retreat Homestay and their other projects, Tam Chay Vegan Restaurants, and Dau Do House Preschool. Currently, we are at an early stage of developing Dau Do House Preschool’s website so it truly reflects the nature of their business.',
-          'development' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat nisl id odio feugiat, eget iaculis leo volutpat. Maecenas ex tellus, ultrices placerat ornare posuere, imperdiet ac augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit efficitur augue, vitae tempus tortor. Quisque et velit iaculis, aliquet purus nec, luctus dolor. Maecenas tempus ex et velit vulputate blandit.',
+          'development' : 'Considering the limitation and the expectations for Tâm Chay Retreat’s booking website we first considered Wix, as it provides a plugin with the ability to book rooms; however, this was not a viable option for the current business model of Tâm Chay. Instead, we decided to go through the open source route and implemented an HTML/CSS template and modified it in accordance to Tâm Chay’s look and feel. Furthermore, for the back-end we implemented an open source room booking PHP library that allowed us to further streamlined the development process as it came with a prebuilt admin panel for managing rooms. We did ran into a problem where we could not instantiate both the website’s PHP code and the PHP booking library at the same time, but after great consideration and a bit of creativity we were able to use an iframe and place the PHP library inside it to create a request for a second instance all in the same window.',
         },
       },
     }
@@ -114,5 +114,21 @@ export default {
   }
   .link-hover {
     background-color: #6C929C;
+  }
+  @media screen and (max-width: 600px) {
+    .title {
+      margin: 0 0 5% 10%;
+      bottom: 10px;
+    }
+    .title h1{
+      margin-bottom: 10px;
+      line-height: 98%;
+    }
+    .title p {
+      font-size: 1.5rem;
+    }
+    .link-buttons {
+      margin: 0 10% 60%;
+    }
   }
 </style>
