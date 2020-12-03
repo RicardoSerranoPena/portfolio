@@ -38,6 +38,10 @@ export default {
     background-color: #142d4c;
     color: #9fd3c7;
   }
+  .ligth {
+    background-color: #ececec;
+    color: #142d4c;
+  }
   .title {
     position: absolute;
     overflow: hidden;
