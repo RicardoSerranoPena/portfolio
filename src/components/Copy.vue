@@ -35,6 +35,7 @@ export default {
     font-size: 2rem;
     color: #9FD3C7;
     letter-spacing: 0.2em;
+    margin: 1rem;
   }
   .copy p {
     flex-basis: 55%;

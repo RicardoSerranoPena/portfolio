@@ -1,5 +1,5 @@
 <template>
-  <div class="full-page light">
+  <div class="full-page light" id="top">
     <div class="title">
       <h1>{{title}}</h1>
       <Border />
@@ -12,8 +12,8 @@
     </div>
     <TitleImage :image="image" />
     <div class="link-buttons">
-      <a href="tamchayretreat.com"><font-awesome-icon :icon="['far', 'eye']" />Visit Site</a>
-      <a href="https://github.com/RicardoSerranoPena/TamChayRetreat"><font-awesome-icon :icon="['fab', 'github']" />See Code</a>
+      <a href="tamchayretreat.com" target="__blank"><font-awesome-icon :icon="['far', 'eye']" />Visit Site</a>
+      <a href="https://github.com/RicardoSerranoPena/TamChayRetreat" target="__blank"><font-awesome-icon :icon="['fab', 'github']" />See Code</a>
     </div>
     <ArrowDown />
   </div>
@@ -38,11 +38,6 @@ export default {
     return {
       'title' : 'Tâm Chay Retreat Homestay',
       'description' : 'Room Booking Website',
-      'techstack' : {
-        'html-5' : 'html-5',
-        'css3-alt' : 'fab',
-        'php' : 'fab',
-      },
       'image' : 'tc_home_ss.png',
       'show' : {
         'details' : {
@@ -52,7 +47,7 @@ export default {
         },
         'demoImage' : 'DemoTamChay.png',
         'copy' : {
-          'concept' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat nisl id odio feugiat, eget iaculis leo volutpat. Maecenas ex tellus, ultrices placerat ornare posuere, imperdiet ac augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit efficitur augue, vitae tempus tortor. Quisque et velit iaculis, aliquet purus nec, luctus dolor. Maecenas tempus ex et velit vulputate blandit.',
+          'concept' : 'Tam Chay Retreat Homestay is a young business with inconsistent cash flow. Thus, they were looking for a permanent solution for booking rooms that unbounds them from the yearly fees of premium booking software. They also wanted a website that represents their business, which is simple, fluid, and natural. They were delighted with the product and offered me a position as a web developer/technical support for Tam Chay Retreat Homestay and their other projects, Tam Chay Vegan Restaurants, and Dau Do House Preschool. Currently, we are at an early stage of developing Dau Do House Preschool’s website so it truly reflects the nature of their business.',
           'development' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat nisl id odio feugiat, eget iaculis leo volutpat. Maecenas ex tellus, ultrices placerat ornare posuere, imperdiet ac augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit efficitur augue, vitae tempus tortor. Quisque et velit iaculis, aliquet purus nec, luctus dolor. Maecenas tempus ex et velit vulputate blandit.',
         },
       },

@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="top-nav">
-      <router-link @click="showNav = !showNav" to="/" v-scroll-to="'#main-page'" class="name">RicardoCodes</router-link>
+      <router-link @click="showNav = !showNav" to="/" v-scroll-to="'#top'" class="name">RicardoCodes</router-link>
       <div id="nav-icon" @click="showNav = !showNav">
         <font-awesome-icon :icon="['fas', icon]" />
       </div>

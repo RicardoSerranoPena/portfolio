@@ -2,17 +2,14 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { faChessQueen } from '@fortawesome/free-solid-svg-icons'
+import { faEye } from '@fortawesome/free-regular-svg-icons'
+import { faAngleRight, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin, faFacebook, faWhatsapp, faHtml5, faCss3Alt, faVuejs, faWix, faPhp} from '@fortawesome/free-brands-svg-icons'
 
-
-library.add(fab)
-library.add(fas)
-library.add(far)
-library.add(faChessQueen)
+library.add(faEye) //regular
+library.add(faAngleRight, faChevronDown) //solid
+library.add(faGithub, faLinkedin, faFacebook, faWhatsapp, faHtml5, faCss3Alt, faVuejs, faWix, faPhp) //brands
 
 const app = createApp(App)
 const VueScrollTo = require('vue-scrollto')

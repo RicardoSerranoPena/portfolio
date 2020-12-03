@@ -6,7 +6,7 @@
     </div>
     <div class="date">
       <h3>date</h3>
-      <p>{{details.role}}</p>
+      <p>{{details.date}}</p>
     </div>
     <div class="overview">
       <h3>overview</h3>

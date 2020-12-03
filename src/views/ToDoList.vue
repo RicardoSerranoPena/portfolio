@@ -1,16 +1,118 @@
 <template>
-  <div class="todolist">
-    <h1>ToDoList</h1>
+  <div class="full-page light" id="top">
+    <div class="title">
+      <h1>{{title}}</h1>
+      <Border />
+      <h2>{{description}}</h2>
+      <div class="tech-stack">
+        <font-awesome-icon :icon="['fab', 'html5']" />
+        <font-awesome-icon :icon="['fab', 'css3-alt']" />
+        <font-awesome-icon :icon="['fab', 'vuejs']" />
+      </div>
+    </div>
+    <TitleImage :image="image" />
+    <div class="link-buttons">
+      <a href="https://goofy-booth-7c199e.netlify.app" target="__blank"><font-awesome-icon :icon="['far', 'eye']" />Visit Site</a>
+      <a href="https://github.com/RicardoSerranoPena/vue_todolist" target="__blank"><font-awesome-icon :icon="['fab', 'github']" />See Code</a>
+    </div>
+    <ArrowDown />
   </div>
+  <Show :show="show" />
 </template>
 
 <script>
-export default {
-  name: 'ToDoList'
+import Border from '@/components/Border';
+import TitleImage from '@/components/TitleImage';
+import ArrowDown from '@/components/ArrowDown';
+import Show from '@/components/Show';
 
+export default {
+  name: 'ToDoList',
+  components : {
+    Border,
+    TitleImage,
+    ArrowDown,
+    Show,
+  },
+  data() {
+    return {
+      'title' : 'ToDoList',
+      'description' : 'VueJS ToDoList web application',
+      'image' : 'tdl_home_ss.png',
+      'show' : {
+        'details' : {
+          'role' : 'Web Developer',
+          'date' : 'August 2019',
+          'overview' : 'Personal Project: A ToDo list app using VueJS framework.',
+        },
+        'demoImage' : 'DemoToDoList.png',
+        'copy' : {
+          'concept' : 'Tam Chay Retreat Homestay is a young business with inconsistent cash flow. Thus, they were looking for a permanent solution for booking rooms that unbounds them from the yearly fees of premium booking software. They also wanted a website that represents their business, which is simple, fluid, and natural. They were delighted with the product and offered me a position as a web developer/technical support for Tam Chay Retreat Homestay and their other projects, Tam Chay Vegan Restaurants, and Dau Do House Preschool. Currently, we are at an early stage of developing Dau Do House Preschool’s website so it truly reflects the nature of their business.',
+          'development' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat nisl id odio feugiat, eget iaculis leo volutpat. Maecenas ex tellus, ultrices placerat ornare posuere, imperdiet ac augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit efficitur augue, vitae tempus tortor. Quisque et velit iaculis, aliquet purus nec, luctus dolor. Maecenas tempus ex et velit vulputate blandit.',
+        },
+      },
+    }
+  },
 }
 </script>
 
 <style scoped>
-
+  html {
+    background-color: #142d4c;
+  }
+  .full-page {
+    flex-wrap: wrap;
+  }
+  .dark {
+    color: #ececec;
+  }
+  .title {
+    position: absolute;
+    overflow: hidden;
+    margin: 0 40% 5% 8%;
+    z-index: 50;
+    font-size: 1.9rem;
+    letter-spacing: 0.04em;
+    flex-basis: 50%;
+  }
+  .title h1{
+    margin-bottom: 1rem;
+  }
+  .title h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .title p, a{
+    font-size: 1.9rem;
+  }
+  .tech-stack svg {
+    margin-right: 2rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
+  .link-buttons {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin: 0 30% 0;
+    align-items: center;
+    text-align: center;
+  }
+  .link-buttons svg {
+    margin-right: 8px;
+  }
+  .link-buttons a {
+    width: 35%;
+    font-size: 1.1rem;
+    padding: .8rem 8px;
+    background-color: #9FD3C7;
+    border-radius: 8px;
+    color: black;
+    box-shadow: 1px 1px 6px grey;
+  }
+  .link-hover {
+    background-color: #6C929C;
+  }
 </style>

@@ -6,14 +6,14 @@
         <span></span>
         <span></span>
       </div>
-      <router-link v-for="work in works" :key="work.id" :to="work.url">
+      <router-link v-for="work in works" :key="work.id" v-scroll-to="'#top'" :to="work.url">
         <div @mouseover="changeWork(work.id), work.isHovered = true" @mouseout="work.isHovered = false">
           <font-awesome-icon class="li-icon" v-show="work.isHovered" :icon="['fas', 'angle-right']" />{{work.title}}
         </div>
       </router-link>
     </div>
     <div class="work-container">
-      <router-link :to="works[index].url" @mouseover="isHovering = true" @mouseout="isHovering = false">
+      <router-link  v-scroll-to="'#top'" :to="works[index].url" @mouseover="isHovering = true" @mouseout="isHovering = false">
         <img alt="portfolio image" :class="{applyBlur : isHovering}" :src="require(`../assets/images/${image}`)">
       </router-link>
       <p class="description">{{description}}</p>
