@@ -38,14 +38,14 @@ export default {
     return {
       'title' : 'ToDoList',
       'description' : 'VueJS ToDoList web application',
-      'image' : 'tdl_home_ss.png',
+      'image' : 'tdl_home_ss.webp',
       'show' : {
         'details' : {
           'role' : 'Web Developer',
           'date' : 'August 2019',
           'overview' : 'Personal Project: A ToDo list app using VueJS framework.',
         },
-        'demoImage' : 'DemoToDoList.png',
+        'demoImage' : 'DemoToDoList.webp',
         'copy' : {
           'concept' : 'This personal project was made with the vision of having a web application that was able to be utilized as a To-do list. Users needed to have the ability to interact with this website seamlessly, similar to the way they would use an application. Furthermore, we needed to use a modern front-end framework to accomplish this, and feed the application some data to be able to display and test its usage was the desired one.',
           'development' : 'We developed this To-do list using VueJS for its reactivity that allowed for the user to truly interact with this website. Using VueJS we were able to make this web application as interactive as possible. We implemented an API that provided us with different todos to feed our application to learn the way to make requests and receive responses, format them and place them inside our ToDoList web application.',

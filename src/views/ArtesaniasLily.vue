@@ -35,14 +35,14 @@ export default {
     return {
       'title' : 'Artesanías Lily',
       'description' : 'E-Commerce CMS Website',
-      'image' : 'a_home_ss.png',
+      'image' : 'a_home_ss.webp',
       'show' : {
         'details' : {
           'role' : 'Web Developer',
           'date' : 'July 2020',
           'overview' : 'An E-Commerce CMS Website was made for Artesanías Lily.',
         },
-        'demoImage' : 'DemoArtesaniasLily.png',
+        'demoImage' : 'DemoArtesaniasLily.webp',
         'copy' : {
           'concept' : 'Artesanias Lily sells authentic hand-crafted artisans and souvenirs from El Salvador. They were looking for a rapid and low-cost solution to expand their business online and adapt to Covid-19. They needed someone with SEO knowledge to stay competitive with other Artesanias Stores in El Salvador. Furthermore, the website needed to be able to synchronize with their other sale channel, which is Facebook.',
           'development' : 'After careful consideration of the limitations and expectations of Artesanias Lily, we knew the best approach was to use a CMS, such as Wix. However we needed to use a service that provided with an easy access control panel for a non-technical person to be able to add any future products the store acquires. Furthermore, we needed to be able to create the website rapidly and with the ability to work in El Salvador, as most customers are from that region. Apart from these issues, we still had to figure out which CMS would provide us with the ability to synchronize all the store’s products with Facebook, another sale’s channel from Artesanias Lily. We were able to chose Wix after considering all of these limitations and quickly developed a website authentic to Artesanias Lily’s desires and upload all of their products, while staying under budget.',

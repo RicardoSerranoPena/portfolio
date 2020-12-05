@@ -11,7 +11,7 @@
       </p>
     </div>
     <div class="portrait-container">
-      <img alt="self-portrait" src="../assets/images/Ricardo.png">
+      <img alt="self-portrait" src="../assets/images/Ricardo.webp">
     </div>
   </div>
 </template>
