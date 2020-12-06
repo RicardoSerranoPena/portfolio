@@ -18,8 +18,7 @@
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          @submit.prevent="onSubmit"
-          >
+          @submit.prevent="handleSubmit">
           <input type="hidden" name="form-name" value="contact-form" />
           <label for="name">Name</label>
           <input id="name" v-model="name">
@@ -39,6 +38,7 @@
 
 <script>
 import Border from '@/components/Border.vue';
+import axios from "axios";
 
 export default {
   name: 'Contact',
@@ -57,8 +57,25 @@ export default {
     }
   },
   methods: {
-    onSubmit() {
-      
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit () {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      };
+      axios.post(
+        "/",
+        this.encode({
+          "form-name": "contact-form",
+          ...this.form
+        }),
+        axiosConfig
+      );
       this.name="";
       this.email="";
       this.message="";
