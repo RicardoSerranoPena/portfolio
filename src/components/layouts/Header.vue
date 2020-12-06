@@ -76,6 +76,7 @@ export default {
   
   .last {
     margin-right: 0 !important;
+    color: #E5D05A !important;
   }
 
 </style>

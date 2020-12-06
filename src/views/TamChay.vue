@@ -107,7 +107,7 @@ export default {
     width: 35%;
     font-size: 1.1rem;
     padding: .8rem 8px;
-    background-color: #9FD3C7;
+    background-color: #E5D05A;
     border-radius: 8px;
     color: black;
     box-shadow: 1px 1px 6px grey;

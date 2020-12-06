@@ -1,16 +1,17 @@
 <template>
   <header>
     <div class="top-nav">
-      <router-link to="/" v-scroll-to="'#top'" class="name">RicardoCodes</router-link>
+      <router-link to="/" v-scroll-to="'#top'" class="name"><span @click="hideNav">RicardoCodes</span></router-link>
       <div id="nav-icon" @click="showNav = !showNav">
-        <font-awesome-icon :icon="['fas', icon]" />
+        <span v-show="showNav"><font-awesome-icon :icon="['fas', 'times']" /></span>
+        <span v-show="!showNav"><font-awesome-icon :icon="['fas', 'bars']" /></span>
       </div>
     </div>
     <div class="mobile-header-content" :class="{'show':showNav}">
       <ul class="links">
-        <li><router-link to="/#work" v-scroll-to="'#work'">Work</router-link></li>
-        <li><router-link to="/#about" v-scroll-to="'#about'">About</router-link></li>
-        <li><router-link to="/#contact" v-scroll-to="'#contact'">Contact</router-link></li>
+        <li><router-link to="/#work" v-scroll-to="'#work'"><span @click="hideNav">Work</span></router-link></li>
+        <li><router-link to="/#about" v-scroll-to="'#about'"><span @click="hideNav">About</span></router-link></li>
+        <li><router-link to="/#contact" v-scroll-to="'#contact'"><span @click="hideNav" class="contact">Contact</span></router-link></li>
         <li class="icons">
           <a href="https://www.linkedin.com/in/ricardoserranopena/" target="__blank"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
           <a href="https://www.facebook.com/ricardo.serranopena/" target="__blank"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
@@ -39,6 +40,15 @@ export default {
         return 'bars';
       }
     },
+  },
+  methods: {
+    hideNav() {
+      if(this.showNav) {
+        this.showNav = !this.showNav;
+      } else {
+        return;
+      }
+    }
   }
 }
 </script>
@@ -116,5 +126,8 @@ export default {
   .show {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+  .contact {
+    color: #E5D05A;
   }
 </style>
