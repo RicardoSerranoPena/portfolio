@@ -21,11 +21,11 @@
           @submit.prevent="handleSubmit">
           <input type="hidden" name="form-name" value="contact-form" />
           <label for="name">Name</label>
-          <input id="name" v-model="name">
+          <input name="name" id="name" v-model="form.name">
           <label for="email">Email</label>
-          <input id="email" v-model="email">
+          <input name="email" id="email" v-model="form.email">
           <label for="message">Message</label>
-          <textarea id="message" v-model="message" placeholder="Write here your questions, inquiries, and comments. I'll reply as soon as I can."></textarea>
+          <textarea name="message" id="message" v-model="form.message" placeholder="Write here your questions, inquiries, and comments. I'll reply as soon as I can."></textarea>
           <input class="button" type="submit" value="Send Message">
         </form>
       </div>
@@ -47,9 +47,11 @@ export default {
   },
   data() {
     return {
-      name: '',
-      email: '',
-      message: '',
+      form : {
+        name: '',
+        email: '',
+        message: '',
+      },
       isDark: true,
       mobileView : false,
       desktopTitle: 'Say Hello',
@@ -76,9 +78,9 @@ export default {
         }),
         axiosConfig
       );
-      this.name="";
-      this.email="";
-      this.message="";
+      this.form.name="";
+      this.form.email="";
+      this.form.message="";
     },
     handleView() {
       this.mobileView = window.innerWidth <= 700;
