@@ -12,7 +12,7 @@
     </div>
     <TitleImage :image="image" />
     <div class="link-buttons">
-      <a href="tamchayretreat.com" target="__blank"><font-awesome-icon :icon="['far', 'eye']" />Visit Site</a>
+      <a href="https://tam-chay-retreat-296606.df.r.appspot.com" target="__blank"><font-awesome-icon :icon="['far', 'eye']" />Visit Site</a>
       <a href="https://github.com/RicardoSerranoPena/TamChayRetreat" target="__blank"><font-awesome-icon :icon="['fab', 'github']" />See Code</a>
     </div>
     <ArrowDown />
