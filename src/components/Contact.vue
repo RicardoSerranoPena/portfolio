@@ -20,6 +20,7 @@
           data-netlify-honeypot="bot-field"
           @submit.prevent="handleSubmit">
           <input type="hidden" name="form-name" value="contact-form" />
+          <div v-show="formError" class="form-error"><p>Please fill out all fields</p></div>
           <label for="name">Name</label>
           <input name="name" id="name" v-model="form.name">
           <label for="email">Email</label>
@@ -56,6 +57,7 @@ export default {
       mobileView : false,
       desktopTitle: 'Say Hello',
       mobileTitle: 'Say Hi',
+      formError: false,
     }
   },
   methods: {
@@ -67,17 +69,22 @@ export default {
         .join("&");
     },
     handleSubmit () {
-      const axiosConfig = {
-        header: { "Content-Type": "application/x-www-form-urlencoded" }
-      };
-      axios.post(
-        "/",
-        this.encode({
-          "form-name": "contact-form",
-          ...this.form
-        }),
-        axiosConfig
-      );
+      if (this.form.name && this.form.email && this.form.message) {
+        const axiosConfig = {
+          header: { "Content-Type": "application/x-www-form-urlencoded" }
+        };
+        axios.post(
+          "/",
+          this.encode({
+            "form-name": "contact-form",
+            ...this.form
+          }),
+          axiosConfig
+        );
+      } else {
+        this.formError = true;
+      }
+
       this.form.name="";
       this.form.email="";
       this.form.message="";
@@ -89,6 +96,7 @@ export default {
   created() {
     this.handleView();
     window.addEventListener('resize', this.handleView);
+    setTimeout(() => this.formError = false, 5000);
   },
   computed: {
     title() {
@@ -219,5 +227,16 @@ export default {
       color: white;
       margin: 1rem auto;
     }
+  }
+  .form-error {
+    background-color: #f2aeae;
+    border-radius: 1em;
+    color: #d40808;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 5px 0;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 8px #1f0202 ;
   }
 </style>
