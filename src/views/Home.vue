@@ -1,10 +1,10 @@
 <template>
-  <div class="main">
-    <MainPage/>
-    <Work/>
-    <About/>
-    <Contact/>
-  </div>
+  <vue-scroll-snap :fullscreen="true">
+      <MainPage/>
+      <Work/>
+      <About/>
+      <Contact/>
+  </vue-scroll-snap>
 </template>
 
 <script>
@@ -12,6 +12,7 @@ import MainPage from '@/components/MainPage';
 import Work from '@/components/Work';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
+import VueScrollSnap from "vue-scroll-snap";
 
 export default {
   name: 'Home',
@@ -19,7 +20,8 @@ export default {
     MainPage,
     Work,
     About,
-    Contact
+    Contact,
+    VueScrollSnap,
   }
 }
 </script>
@@ -27,12 +29,13 @@ export default {
 <style>
   .full-page {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
     background-color: #ececec;
     color: #142d4c;
+    scroll-snap-align: start;
   }
   .dark {
     background-color: #142d4c;

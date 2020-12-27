@@ -184,6 +184,7 @@ export default {
   }
   .full-contact {
     position: relative;
+    min-height: 100%;
   }
   .extra-space {
     position: absolute;

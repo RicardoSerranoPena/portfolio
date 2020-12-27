@@ -49,6 +49,13 @@ export default {
     border: 0;
     vertical-align: baseline;
   }
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 0px; 
+  }
   a {
     color: #9fd3c7;
     text-decoration: none;
